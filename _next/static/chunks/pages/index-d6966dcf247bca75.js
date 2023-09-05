@@ -212,9 +212,9 @@
                             style: {
                               textDecoration: "none",
                               marginTop: "1.3vh",
-                              width: "14.3vh",
+                              width: "auto",
                             },
-                            children: "지원전 피드백 받기",
+                            children: "지원 전 피드백 받기",
                           })
                         : (0, i.jsxs)(i.Fragment, {
                             children: [
@@ -261,7 +261,7 @@
                         children: [
                           "막막했던 이직 과정",
                           (0, i.jsx)("br", {}),
-                          "심플하게",
+                          "현직자에게",
                         ],
                       }),
                       (0, i.jsxs)("h4", {
@@ -298,7 +298,7 @@
                       (0, i.jsxs)("h4", {
                         className: "description",
                         children: [
-                          "어떤 회사에 가야할지 몰라 무작위 지원했나요?",
+                          "지원 할 회사 현직자와 이야기 해본 적 있나요?",
                           (0, i.jsx)("br", {}),
                           "간편 피드백이 있어요.",
                         ],
