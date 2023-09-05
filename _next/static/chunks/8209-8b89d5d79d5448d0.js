@@ -270,7 +270,7 @@
                             href: "https://www.instagram.com/toss.securities/",
                             className: "bookMarkLink",
                             children: (0, i.jsx)("img", {
-                              src: "https://static.toss.im/assets/homepage/safety/icn-instagram.svg",
+                              src: "https://www.instagram.com/in10s.co",
                               alt: "지원전에 인스타그램",
                             }),
                           }),
@@ -302,7 +302,7 @@
               }),
               (0, i.jsx)("link", {
                 rel: "shortcut icon",
-                href: "https://static.toss.im/tds/favicon/favicon.ico",
+                href: "/static.toss.im/tds/favicon/favicon.ico",
               }),
               (0, i.jsx)("link", {
                 rel: "icon",
@@ -366,7 +366,7 @@
               (0, i.jsx)("title", { children: "지원전에" }),
               (0, i.jsx)("meta", {
                 name: "description",
-                content: "모두의 투자를 바꾸다",
+                content: "이직을 심플하게",
               }),
             ],
           });
