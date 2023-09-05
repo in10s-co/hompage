@@ -343,6 +343,9 @@
                   "./static/images/pc_05.png",
                 mobileImage:
                   "./static/images/mo_05.png",
+                style: {
+                  "background-color": "#E9E5FF",
+                },
                 children: (0, i.jsx)(_, {
                   children: (0, i.jsxs)("div", {
                     className: "content-container",
