@@ -443,7 +443,7 @@
                             children: (0, i.jsx)("div", {
                               className: "logoImage",
                               children: (0, i.jsx)("img", {
-                                src: "https://static.toss.im/icons/svg/logo-securities-kr.svg",
+                                src: "/static.toss.im/icons/svg/logo-securities-kr.svg",
                                 alt: "logo",
                                 className: "logoImageItem",
                               }),
