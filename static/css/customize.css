@@ -1,0 +1,65 @@
+.p-tab {
+    font-size: 17px !important;
+    font-stretch: normal !important;
+    font-style: normal !important;
+    line-height: 1.41 !important;
+    letter-spacing: normal !important;
+    color: #191f28 !important;
+    overflow-y: hidden;
+}
+
+.p-tab::after {
+    background-color: unset !important;
+    height: 0px !important;
+}
+
+.line {
+    max-width: 1044px;
+    width: auto;
+    height: 1px;
+    background-color: rgba(0, 29, 58, 0.18);
+}
+.light-line {
+    max-width: 1044px;
+    width: auto;
+    height: 1px;
+    background-color: rgba(2, 32, 71, 0.05);
+}
+
+@media (min-width: 769px) {
+    .go-list-button {
+        margin: 16px;
+        text-decoration: none;
+    }
+    .margin-top-button {
+        margin-top: 48px;
+    }
+}
+
+@media (min-width: 10px) and (max-width: 768px) {
+    .go-list-button {
+        margin: 12px;
+        text-decoration: none
+    }
+    .margin-top-button {
+        margin-top: 5.2vh;
+    }
+}
+
+.app-download-button {
+    width: 154px;
+    height: 53px;
+    margin: 0 12px 0 0;
+}
+
+.editor-contents {
+    border-color : var(--adaptiveGrey400) !important;
+}
+
+.editor-contents h4 {
+    font-size: 20px !important;
+}
+
+.editor-contents ol li {
+    text-indent : -0.8em !important;
+}
