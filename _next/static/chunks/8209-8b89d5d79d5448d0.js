@@ -392,15 +392,9 @@
       }
       let k = c.ZP.div.withConfig({ componentId: "sc-656ff4de-0" })(w()),
         y = [
-          { href: "https://toss.im/team", label: "회사소개", isExternal: !0 },
-          { href: "/business", label: "증권 업무" },
-          { href: "/management", label: "경영 정보" },
-          { href: "/customer", label: "고객센터" },
-          {
-            href: "https://toss.im/career/jobs/?category=%EC%A0%84%EC%B2%B4&company=securities",
-            label: "채용",
-            isExternal: !0,
-          },
+          { href: "https://www.in10s.co/jiwon/service", label: "이용 안내", isExternal: !0 },
+          { href: "https://www.in10s.co/jiwon/faq", label: "자주 묻는 질문", isExternal: !0 },
+          { href: "javascript:openTally();", label: "간편 가입" },
         ];
       var z = function (n) {
         let { transparent: e = !1, isMainPage: t = !1 } = n,

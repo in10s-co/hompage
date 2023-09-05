@@ -208,7 +208,7 @@
                         ? (0, i.jsx)(a.zx, {
                             type: "primary",
                             as: "a",
-                            href: "https://toss.onelink.me/3563614660?pid=referral&af_dp=supertoss://lab?url=https%3A%2F%2Fservice.tossinvest.com",
+                            href: "javascript:openTally();",
                             style: {
                               textDecoration: "none",
                               marginTop: "1.3vh",
@@ -230,7 +230,7 @@
                               (0, i.jsx)(a.zx, {
                                 type: "primary",
                                 as: "a",
-                                href: "https://toss.onelink.me/3563614660?pid=referral&af_dp=supertoss://lab?url=https%3A%2F%2Fservice.tossinvest.com",
+                                href: "javascript:openTally();",
                                 style: {
                                   textDecoration: "none",
                                   marginTop: "1.3vh",
@@ -436,7 +436,7 @@
                       (0, i.jsx)(a.zx, {
                         type: "primary",
                         as: "a",
-                        href: "https://toss.onelink.me/3563614660?pid=referral&af_dp=supertoss://lab?url=https%3A%2F%2Fservice.tossinvest.com",
+                        href: "javascript:openTally();",
                         style: {
                           textDecoration: "none",
                           marginTop: "1.3vh",

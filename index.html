@@ -12,10 +12,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link
-      rel="shortcut icon"
-      href="/static.toss.im/tds/favicon/favicon.ico"
-    />
+    <link rel="shortcut icon" href="/static.toss.im/tds/favicon/favicon.ico" />
     <link
       rel="icon"
       type="image/png"
@@ -233,6 +230,27 @@
       src="_next/static/4xGBMwRJSS8xjBdULhkjj/_ssgManifest.js"
       defer=""
     ></script>
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <script>
+      function openTally() {
+        Tally.openPopup("3NlXpN", {
+          layout: "modal",
+          width: 400,
+          hideTitle: false,
+          onOpen: () => {
+            // The popup was opened, mark the form as seen
+          },
+          onClose: () => {
+            // The popup was closed
+          },
+          onSubmit: (payload) => {
+            // Form was submitted, use the answers payload in your application
+            document.querySelector(".tally-popup iframe").src =
+              "https://www.in10s.co/jiwon/service?mode=iframe";
+          },
+        });
+      }
+    </script>
     <style data-styled="" data-styled-version="6.0.0-rc.2-4007">
       .gkflcZ .header {
         z-index: 999;
