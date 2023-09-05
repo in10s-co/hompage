@@ -212,8 +212,9 @@
                             style: {
                               textDecoration: "none",
                               marginTop: "1.3vh",
+                              width: "14.3vh",
                             },
-                            children: "간편가입",
+                            children: "지원전 피드백 받기",
                           })
                         : (0, i.jsxs)(i.Fragment, {
                             children: [

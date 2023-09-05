@@ -65,14 +65,14 @@
         //     ],
         //   },
           {
-            title: { href: "#", label: "PRODUCT" },
+            title: { href: "javascript:void(0);", label: "PRODUCT" },
             contents: [
               { href: "https://www.in10s.co/413eec66-2028-444e-8114-af2c1881db00", label: "10s 자세히보기" },
               { href: "https://www.in10s.co/fd538d5c-5800-44d3-9953-83a7a6289104", label: "기업 광고 문의" },
             ],
           },
           {
-            title: { href: "#", label: "COMPANY" },
+            title: { href: "javascript:void(0);", label: "COMPANY" },
             contents: [
               { href: "https://www.in10s.co/413eec66-2028-444e-8114-af2c1881db00", label: "팀 소개" },
             ],
@@ -109,14 +109,14 @@
         f = [
           {
             title: {
-              href: "#",
+              href: "javascript:void(0);",
               label: "이용약관",
               isBold: !1,
             },
           },
           {
             title: {
-              href: "#".concat(l.fN ? 29 : 149),
+              href: "javascript:void(0);".concat(l.fN ? 29 : 149),
               label: "개인정보 처리방침",
               isBold: !0,
             },
