@@ -410,7 +410,7 @@
                       (0, i.jsx)("img", {
                         className: "toss-app-logo",
                         alt: "toss app logo",
-                        src: "https://static.tossinvestcdn.com/assets/image/web/tossapp.png",
+                        src: "./static/images/applogo.png",
                       }),
                       (0, i.jsxs)("h4", {
                         className: "title",
@@ -480,7 +480,7 @@
             //             className: "title",
             //             style: { color: "rgb(255, 255, 255)" },
             //             children: [
-            //               "토스증권의 혁신",
+            //               "지원전에의 혁신",
             //               (0, i.jsx)("br", {}),
             //               "이제부터 시작입니다.",
             //             ],
@@ -489,7 +489,7 @@
             //             className: "description",
             //             style: { color: "rgb(139, 149, 161)" },
             //             children: [
-            //               "토스증권이 만들 투자 산업의 새로운 혁신,",
+            //               "지원전에이 만들 투자 산업의 새로운 혁신,",
             //               (0, i.jsx)("br", {}),
             //               "그 시작을 함께할 당신을 기다리고 있습니다.",
             //             ],

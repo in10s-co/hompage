@@ -47,7 +47,7 @@
       let p = c.ZP.div.withConfig({ componentId: "sc-7a2bb4e7-0" })(d()),
         h = [
         //   {
-        //     title: { href: "/", label: "토스증권" },
+        //     title: { href: "/", label: "지원전에" },
         //     contents: [
         //       { href: "/management/", label: "경영 정보" },
         //       {
@@ -271,7 +271,7 @@
                             className: "bookMarkLink",
                             children: (0, i.jsx)("img", {
                               src: "https://static.toss.im/assets/homepage/safety/icn-instagram.svg",
-                              alt: "토스증권 인스타그램",
+                              alt: "지원전에 인스타그램",
                             }),
                           }),
                         }),
@@ -363,7 +363,7 @@
                 content:
                   "https://static.toss.im/tds/favicon/mstile-144x144.png",
               }),
-              (0, i.jsx)("title", { children: "토스증권" }),
+              (0, i.jsx)("title", { children: "지원전에" }),
               (0, i.jsx)("meta", {
                 name: "description",
                 content: "모두의 투자를 바꾸다",
