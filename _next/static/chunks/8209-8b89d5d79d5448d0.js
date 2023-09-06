@@ -67,14 +67,14 @@
           {
             title: { href: "javascript:void(0);", label: "PRODUCT" },
             contents: [
-              { href: "https://www.in10s.co/413eec66-2028-444e-8114-af2c1881db00", target: "blank", isExternal: !0, label: "10s 자세히 보기" },
-              { href: "https://www.in10s.co/fd538d5c-5800-44d3-9953-83a7a6289104, target: "blank", isExternal: !0, label: "기업 광고 문의" },
+              { href: "https://www.in10s.co/413eec66-2028-444e-8114-af2c1881db00", target: "_blank", rel: "noreferrer", label: "10s 자세히 보기" },
+              { href: "https://www.in10s.co/fd538d5c-5800-44d3-9953-83a7a6289104, target: "_blank", rel: "noreferrer", label: "기업 광고 문의" },
             ],
           },
           {
             title: { href: "javascript:void(0);", label: "COMPANY" },
             contents: [
-              { href: "https://www.in10s.co/413eec66-2028-444e-8114-af2c1881db00", target: "blank", isExternal: !0, label: "팀 소개" },
+              { href: "https://www.in10s.co/413eec66-2028-444e-8114-af2c1881db00", target: "_blank", rel: "noreferrer", label: "팀 소개" },
             ],
           },
           {
@@ -271,7 +271,7 @@
                             className: "bookMarkLink",
                             children: (0, i.jsx)("img", {
                               src: "https://www.instagram.com/in10s.co",
-                              alt: "지원전에 인스타그램", target: "blank", isExternal: !0,
+                              alt: "지원전에 인스타그램", target: "_blank", rel: "noreferrer",
                             }),
                           }),
                         }),
