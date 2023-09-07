@@ -206,7 +206,7 @@
                         ? (0, i.jsx)(a.zx, {
                             type: "primary",
                             as: "a",
-                            href: "javascript:openTally();",
+                            href: "javascript:openTally('btn1-mobile');",
                             style: {
                               textDecoration: "none",
                               marginTop: "1.3vh",
@@ -229,7 +229,7 @@
                               (0, i.jsx)(a.zx, {
                                 type: "primary",
                                 as: "a",
-                                href: "javascript:openTally();",
+                                href: "javascript:openTally('btn1-pc');",
                                 style: {
                                   textDecoration: "none",
                                   marginTop: "1.3vh",
@@ -433,7 +433,7 @@
                       (0, i.jsx)(a.zx, {
                         type: "primary",
                         as: "a",
-                        href: "javascript:openTally();",
+                        href: "javascript:openTally('btn2');",
                         style: {
                           textDecoration: "none",
                           marginTop: "1.3vh",
