@@ -7,11 +7,11 @@ document.write(
 
 window.addEventListener("load", function () {
     const host = window.location.host;
-    alert(host == "in10s.co" || host == "www.in10s.co");
+    // alert(host == "in10s.co" || host == "www.in10s.co");
   if (host == "in10s.co" || host == "www.in10s.co") {
-    alert(window.location.host);
+    // alert(window.location.host);
     const toggleBtn = document.querySelector(".buttonIcon");
-    const header = document.querySelector(".notion_header");
+    const header = document.querySelector(".header");
 
     toggleBtn.addEventListener("click", () => {
       header.classList.toggle("headerOpen");
