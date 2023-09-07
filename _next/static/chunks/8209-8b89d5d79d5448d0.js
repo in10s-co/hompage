@@ -267,11 +267,11 @@
                         (0, i.jsx)("li", {
                           className: "bookMarkItem",
                           children: (0, i.jsx)("a", {
-                            href: "https://www.instagram.com/toss.securities/",
+                            href: "https://www.instagram.com/in10s.co",
                             className: "bookMarkLink",
                             children: (0, i.jsx)("img", {
-                              src: "https://www.instagram.com/in10s.co",
-                              alt: "지원전에 인스타그램", 
+                              src: "/static.toss.im/icons/svg/icn-instagram.svg",
+                              alt: "지원전에 인스타그램",
                             }),
                           }),
                         }),
