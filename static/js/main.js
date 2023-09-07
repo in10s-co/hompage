@@ -7,9 +7,10 @@ document.write(
 
 window.addEventListener("load", function () {
     // alert(window.location.host);
-  if (window.location.host == "in10s.co") {
+    const host = window.location.host;
+  if (host == "in10s.co" || host == "www.in10s.co") {
     const toggleBtn = document.querySelector(".buttonIcon");
-    const header = document.querySelector(".header");
+    const header = document.querySelector(".notion_header");
 
     toggleBtn.addEventListener("click", () => {
       header.classList.toggle("headerOpen");

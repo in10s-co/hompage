@@ -1,3 +1,27 @@
+.notion_header {
+  width: 100%;
+  z-index: 1000000;
+  --color: rgb(255, 86, 0);
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  align-items: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.notion_headerWrap {
+  position: relative;
+  width: 100vw;
+  max-width: 1080px;
+  height: 58px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 12px 18px;
+  box-sizing: border-box;
+}
+
 .header {
   z-index: 999;
   position: fixed;
