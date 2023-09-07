@@ -1,4 +1,4 @@
-.notion_header {
+/* .notion_header {
   width: 100%;
   z-index: 1000000;
   --color: rgb(255, 86, 0);
@@ -20,7 +20,7 @@
   margin-left: auto;
   padding: 12px 18px;
   box-sizing: border-box;
-}
+} */
 
 .header {
   z-index: 999;

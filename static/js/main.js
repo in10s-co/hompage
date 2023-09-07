@@ -6,9 +6,10 @@ document.write(
 );
 
 window.addEventListener("load", function () {
-    // alert(window.location.host);
     const host = window.location.host;
+    alert(host == "in10s.co" || host == "www.in10s.co");
   if (host == "in10s.co" || host == "www.in10s.co") {
+    alert(window.location.host);
     const toggleBtn = document.querySelector(".buttonIcon");
     const header = document.querySelector(".notion_header");
 
