@@ -97,7 +97,10 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="Toss Securities" />
     <meta name="author" content="Toss Securities" />
-    <meta name="keywords" content="지원전에, 이직, 환승이직, 물경력, 퇴준생, 퇴사준비생" />
+    <meta
+      name="keywords"
+      content="지원전에, 이직, 환승이직, 물경력, 퇴준생, 퇴사준비생"
+    />
     <link rel="preconnect" href="/static.toss.im/index.html" />
     <link rel="stylesheet" href="/static.toss.im/tds-pc/3.246.0/main.css" />
     <link
@@ -128,9 +131,7 @@
         "@type": "Organization",
         "name": "지원전에",
         "url": "http://jiwon.in10s.co",
-        "sameAs": [
-          "https://www.instagram.com/in10s.co/",
-        ]
+        "sameAs": ["https://www.instagram.com/in10s.co/"]
       }
     </script>
     <noscript
@@ -218,6 +219,31 @@
           },
         });
       }
+      window.onload = function () {
+        const tooltip = document.querySelector(".PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs-0");
+        var closed = true;
+        window.addEventListener("scroll", function () {
+          let scroll_height = window.pageYOffset;
+          if (
+            tooltip.style.opacity != 1 &&
+            scroll_height > document.body.offsetHeight * 0.3 &&
+            closed
+          ) {
+            tooltip.style.animation = "fadeInRight 1.5s";
+            setTimeout(() => {
+              tooltip.style.opacity = 1;
+            }, 1500);
+          }
+        });
+        const tooltip_close_btn= document.querySelector(".PopupCloseBtn__CloseButton-ch-front__sc-14jjsiy-1");
+        tooltip_close_btn.addEventListener("click", function() {
+          tooltip.style.animation = "fadeOut 1.5s";
+          setTimeout(() => {
+            tooltip.style.opacity = 0;
+            closed = false;
+          }, 1500);
+        });
+      };
     </script>
     <style data-styled="" data-styled-version="6.0.0-rc.2-4007">
       .gkflcZ .header {
@@ -579,40 +605,10 @@
         <div class="header headerTransparent">
           <div class="headerWrap">
             <div class="headerLogo">
-              <a class="logoLink" href="index.html"
-                ><div class="logoImage">
-                  <img
-                    src="/static.toss.im/icons/svg/logo-securities-kr.svg"
-                    alt="logo"
-                    class="logoImageItem"
-                  /></div
-              ></a>
+                <div class="logoImage">
+                </div>
             </div>
-            <button class="headerAsideButton">
-              <span class="buttonIcon buttonIconNav">메뉴 열기</span>
-            </button>
             <nav class="headerNav">
-              <a
-                href="https://toss.im/team"
-                class="headerNavItem headerNavItemTransparent navTextMain"
-                >회사소개</a
-              ><a
-                class="headerNavItem headerNavItemTransparent navTextMain"
-                href="business/index.html"
-                >증권 업무</a
-              ><a
-                class="headerNavItem headerNavItemTransparent navTextMain"
-                href="management/index.html"
-                >경영 정보</a
-              ><a
-                class="headerNavItem headerNavItemTransparent navTextMain"
-                href="customer/index.html"
-                >고객센터</a
-              ><a
-                href="https://toss.im/career/jobs/?category=%EC%A0%84%EC%B2%B4&amp;company=securities"
-                class="headerNavItem headerNavItemTransparent navTextMain"
-                >채용</a
-              >
             </nav>
           </div>
         </div>
@@ -633,5 +629,189 @@
         "scriptLoader": []
       }
     </script>
+    <style>
+
+      @keyframes fadeInRight {
+        0% {
+          opacity: 0;
+          transform: translate3d(80%, 0, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translateZ(0);
+        }
+      }
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      /* 채널톡 */
+      .bqvTLz {
+        opacity: 0;
+        z-index: 2;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+min-width: 230px;
+max-width: 320px;
+}
+.a11y-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+margin-top: -1px;
+overflow-x: hidden;
+overflow-y: hidden;
+clip: rect(0px, 0px, 0px, 0px);
+clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+}
+.cmKwMG {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+width: 100%;
+height: max-content;
+}
+.hLIkPg {
+position: relative;
+display: flex;
+flex-direction: column;
+width: 100%;
+padding-bottom: 16px;
+overflow-x: hidden;
+overflow-y: hidden;
+color: rgb(0, 0, 0);
+cursor: pointer;
+box-shadow: rgba(255, 255, 255, 0.12) 0px 0px 2px 0px inset, rgba(0, 0, 0, 0.05) 0px 0px 2px 1px, rgba(0, 0, 0, 0.15) 0px 4px 12px;
+background-color: rgb(255, 255, 255);
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+border-bottom-left-radius: 20px;
+}
+.iwvFdZ {
+position: relative;
+width: 100%;
+}
+.iFvORg {
+position: relative;
+width: 320px;
+min-width: 320px;
+height: 192px;
+object-fit: cover;
+}
+.iZiajQ {
+vertical-align: bottom;
+}
+.jlnpwP {
+position: absolute;
+top: 0px;
+right: 0px;
+padding-top: 10px;
+padding-right: 10px;
+}
+.fOmWsj {
+/* padding-top: 4px; */
+color: rgb(255, 255, 255);
+cursor: pointer;
+background-color: rgba(0, 0, 0, 0.4);
+border-top-left-radius: 18px;
+border-top-right-radius: 18px;
+border-bottom-right-radius: 18px;
+border-bottom-left-radius: 18px;
+}
+.ddFBpb {
+display: block;
+}
+.dVEMjZ {
+flex-grow: 0;
+flex-shrink: 0;
+flex-basis: auto;
+width: 20px;
+height: 20px;
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+margin-left: 0px;
+color: inherit;
+cursor: pointer;
+opacity: 1;
+}
+.ctWArk {
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+width: 100%;
+padding-top: 18px;
+padding-right: 18px;
+padding-left: 18px;
+padding-bottom: 0px;
+}
+.bnVNxb {
+display: flex;
+-webkit-box-align: center;
+align-items: center;
+padding-left: 1px;
+margin-bottom: 6px;
+overflow-x: hidden;
+overflow-y: hidden;
+}
+.kNVesC {
+margin-right: 8px;
+font-weight: bold;
+font-size: 14px;
+line-height: 18px;
+overflow-x: hidden;
+overflow-y: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+.gPkYN {
+flex-shrink: 0;
+margin-right: 0px;
+overflow-x: hidden;
+overflow-y: hidden;
+font-size: 12px;
+line-height: 16px;
+color: rgba(0, 0, 0, 0.4);
+}
+.dhDxhW {
+color: rgb(0, 0, 0);
+word-break: break-word;
+overflow-wrap: break-word;
+white-space: pre-line;
+}
+.dhDxhW > div {
+font-size: 15px;
+line-height: 20px;
+letter-spacing: -0.1px;
+}
+.crySfi div[id^="node-"], .crySfi b, .crySfi i, .crySfi a, .crySfi li {
+font-size: inherit;
+line-height: inherit;
+}
+.crySfi div#node-373ab5fd-e232-4078-8469-f15dd8388703 {
+display: -webkit-box;
+text-overflow: ellipsis;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+}
+.dhDxhW div.empty-line {
+height: 10px;
+}
+.crySfi div.empty-line {
+display: block;
+line-height: 5px;
+}
+
+    </style>
+    <article role="dialog" class="PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs-0 bqvTLz"><h2 class="a11y-hidden">Channel Talk pop-up</h2><div class="PCPushMsgContent__ContentWrapper-ch-front__sc-1d1ypmh-0 cmKwMG"><div role="button" class="MediumSizeContentstyled__Wrapper-ch-front__sc-1flgzbv-2 hLIkPg"><button type="button" class="a11y-hidden">상담 시작하기</button><div class="MediumSizeContentstyled__PreviewSection-ch-front__sc-1flgzbv-3 iwvFdZ"><img alt="1 of 1" class="LazyImagestyled__Image-ch-front__sc-16beoqq-0 iZiajQ ImageFilestyled__LazyImage-ch-front__sc-zrf27x-0 iFvORg" width="320" height="192" src="https://cf.channel.io/pub-file/1/642c22c776cafeae607c/file.gif"><div class="PopupCloseBtn__CloseButtonArea-ch-front__sc-14jjsiy-2 jlnpwP"><span class="a11y-hidden">닫기</span><button color="bgtxt-absolute-white-dark" class="PopupCloseBtn__CloseButton-ch-front__sc-14jjsiy-1 fOmWsj"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" foundation="[object Object]" class="InnerIconstyled__Icon-ch-front__sc-197h5bb-0 dVEMjZ PopupCloseBtn__CloseIcon-ch-front__sc-14jjsiy-0 ddFBpb" defaultopacity="1" hoveredopacity="1" margintop="0" marginright="0" marginbottom="0" marginleft="0" withtheme="false"><path fill="currentColor" d="M4.92893 4.92893C4.34315 5.51472 4.34315 6.46447 4.92893 7.05025L9.87868 12L4.92893 16.9497C4.34315 17.5355 4.34315 18.4853 4.92893 19.0711C5.51472 19.6569 6.46447 19.6569 7.05025 19.0711L12 14.1213L16.9497 19.0711C17.5355 19.6569 18.4853 19.6569 19.0711 19.0711C19.6569 18.4853 19.6569 17.5355 19.0711 16.9497L14.1213 12L19.0711 7.05025C19.6569 6.46447 19.6569 5.51472 19.0711 4.92893C18.4853 4.34315 17.5355 4.34315 16.9497 4.92893L12 9.87868L7.05025 4.92893C6.46447 4.34315 5.51472 4.34315 4.92893 4.92893Z"></path></svg></button></div></div><div class="MediumSizeContentstyled__ContentSection-ch-front__sc-1flgzbv-4 ctWArk"><div class="MediumSizeContentstyled__ContentHeader-ch-front__sc-1flgzbv-0 bnVNxb"><span class="a11y-hidden">, from </span><div class="MediumSizeContentstyled__Name-ch-front__sc-1flgzbv-5 kNVesC">Channel</div><span class="MediumSizeContentstyled__Time-ch-front__sc-1flgzbv-1 gPkYN">방금</span></div><div class="MediumSizeContentstyled__MessageWrapper-ch-front__sc-1flgzbv-6 dhDxhW"><span class="a11y-hidden">, message: </span><div class="Messagestyled__Wrapper-ch-front__sc-19x3rf3-0 crySfi"><div id="node-cfb0421b-949d-4e8f-9103-afe0e87c6460">안녕하세요! 채널팀 입니다<img src="https://cf.channel.io/asset/emoji/images/80/wave.png" alt="wave" data-context-type="emoji" size="18" width="18" height="18" class="Emojistyled__Emoji-ch-front__sc-kwanmh-0 kQKnqh"> ​</div><div id="node-de871880-b96d-4324-8311-e125374024f9">가격 플랜이 궁금하신가요? </div><div id="node-2665c42a-3151-42cf-8fe0-78837fd3a7af"><b>딱 맞는 플랜과 활용법을 추천해 드릴게요 </b><img src="https://cf.channel.io/asset/emoji/images/80/hugging_face.png" alt="hugging_face" data-context-type="emoji" size="18" width="18" height="18" class="Emojistyled__Emoji-ch-front__sc-kwanmh-0 kQKnqh"></div><div id="node-373ab5fd-e232-4078-8469-f15dd8388703" class="empty-line">
+​</div><div id="node-6a7e4eb8-80e8-43e7-9a3b-03bf8aba718b"><img src="https://cf.channel.io/asset/emoji/images/80/white_check_mark.png" alt="white_check_mark" data-context-type="emoji" size="18" width="18" height="18" class="Emojistyled__Emoji-ch-front__sc-kwanmh-0 kQKnqh"> 무료와 유료의 차이는 무엇인가요?</div><div id="node-411eadb8-12de-43f2-8bf3-942ea148c697"><img src="https://cf.channel.io/asset/emoji/images/80/white_check_mark.png" alt="white_check_mark" data-context-type="emoji" size="18" width="18" height="18" class="Emojistyled__Emoji-ch-front__sc-kwanmh-0 kQKnqh"> 단골, 어떻게 알아보고 관리할까요?</div><div id="node-b6d3c86d-287a-469b-9d8a-0f783e716854"><img src="https://cf.channel.io/asset/emoji/images/80/white_check_mark.png" alt="white_check_mark" data-context-type="emoji" size="18" width="18" height="18" class="Emojistyled__Emoji-ch-front__sc-kwanmh-0 kQKnqh"> 다른 회사는 채널톡을 어떻게 쓸까요? </div><div id="node-02415171-8a27-4488-b3c8-9278f36019bb" class="empty-line"></div><div id="node-41522aec-7636-49bf-8319-12e669dadefe">1:1 실시간 도입 상담을 도와드릴게요!</div></div></div></div></div></div></article>
   </body>
 </html>
