@@ -135,7 +135,7 @@
       }
       function b() {
         let n = c([
-          "\n  position: relative;\n\n  .title {\n    font-size: 48px;\n    font-weight: bold;\n    font-stretch: normal;\n    font-style: normal;\n    line-height: 1.31;\n    margin-bottom: 16px;\n    color: #191f28;\n\n    @media (max-width: 768px) {\n      font-size: 36px !important;\n      font-weight: bold;\n      line-height: 1.38 !important;\n      color: #191f28;\n      margin-bottom: 1.3vh;\n    }\n  }\n\n  .description {\n    font-size: 20px;\n    font-weight: 500;\n    font-stretch: normal;\n    font-style: normal;\n    line-height: 1.58;\n    letter-spacing: normal;\n    color: #8b95a1;\n\n    @media (max-width: 768px) {\n      font-size: 19px;\n      font-weight: 500;\n      font-stretch: normal;\n      font-style: normal;\n      line-height: 1.47;\n      letter-spacing: normal;\n      color: #8b95a1;\n    }\n  }\n",
+          "\n  position: relative;\n\n  .title {\n    font-size: 48px;\n    font-weight: bold;\n    font-stretch: normal;\n    font-style: normal;\n    line-height: 1.31;\n    margin-bottom: 16px;\n    color: #191f28;\n\n    @media (max-width: 768px) {\n      font-size: 35px !important;\n      font-weight: bold;\n      line-height: 1.38 !important;\n      color: #191f28;\n      margin-bottom: 1.3vh;\n    }\n  }\n\n  .description {\n    font-size: 20px;\n    font-weight: 500;\n    font-stretch: normal;\n    font-style: normal;\n    line-height: 1.58;\n    letter-spacing: normal;\n    color: #8b95a1;\n\n    @media (max-width: 768px) {\n      font-size: 19px;\n      font-weight: 500;\n      font-stretch: normal;\n      font-style: normal;\n      line-height: 1.47;\n      letter-spacing: normal;\n      color: #8b95a1;\n    }\n  }\n",
         ]);
         return (
           (b = function () {
@@ -188,10 +188,8 @@
           return (0, i.jsxs)(i.Fragment, {
             children: [
               (0, i.jsx)(f, {
-                desktopImage:
-                  "./static/images/pc_01.png",
-                mobileImage:
-                  "./static/images/mo_01.png",
+                desktopImage: "./static/images/pc_01.png",
+                mobileImage: "./static/images/mo_01.png",
                 children: (0, i.jsx)(_, {
                   children: (0, i.jsxs)("div", {
                     className: "content-container",
@@ -218,16 +216,16 @@
                           })
                         : (0, i.jsxs)(i.Fragment, {
                             children: [
-                            //   (0, i.jsx)("a", {
-                            //     href: "https://play.google.com/store/apps/details?id=viva.republica.toss",
-                            //     target: "_blank",
-                            //     rel: "noreferrer",
-                            //     children: (0, i.jsx)("img", {
-                            //       className: "app-download-button",
-                            //       alt: "aos toss download",
-                            //       src: "https://static.tossinvestcdn.com/assets/image/web/download_google.png",
-                            //     }),
-                            //   }),
+                              //   (0, i.jsx)("a", {
+                              //     href: "https://play.google.com/store/apps/details?id=viva.republica.toss",
+                              //     target: "_blank",
+                              //     rel: "noreferrer",
+                              //     children: (0, i.jsx)("img", {
+                              //       className: "app-download-button",
+                              //       alt: "aos toss download",
+                              //       src: "https://static.tossinvestcdn.com/assets/image/web/download_google.png",
+                              //     }),
+                              //   }),
                               (0, i.jsx)(a.zx, {
                                 type: "primary",
                                 as: "a",
@@ -247,10 +245,8 @@
                 }),
               }),
               (0, i.jsx)(w, {
-                desktopImage:
-                  "./static/images/pc_02.png",
-                mobileImage:
-                  "./static/images/mo_02.png",
+                desktopImage: "./static/images/pc_02.png",
+                mobileImage: "./static/images/mo_02.png",
                 children: (0, i.jsx)(_, {
                   children: (0, i.jsxs)("div", {
                     className: "content-container",
@@ -261,7 +257,7 @@
                         children: [
                           "막막했던 이직 과정",
                           (0, i.jsx)("br", {}),
-                          "현직자에게",
+                          "현직자에게 확인",
                         ],
                       }),
                       (0, i.jsxs)("h4", {
@@ -280,8 +276,7 @@
               }),
               (0, i.jsx)(k, {
                 "data-aos": n ? "" : "fade-up",
-                desktopImage:
-                  "./static/images/pc_03.png",
+                desktopImage: "./static/images/pc_03.png",
                 children: (0, i.jsx)(_, {
                   children: (0, i.jsxs)("div", {
                     className: "content-container",
@@ -298,7 +293,9 @@
                       (0, i.jsxs)("h4", {
                         className: "description",
                         children: [
-                          "지원 할 회사 현직자와 이야기 해본 적 있나요?",
+                          "지원 할 회사 현직자와",
+                          (0, i.jsx)("br", {}),
+                          "이야기 해본 적 있나요?",
                           (0, i.jsx)("br", {}),
                           "간편 피드백이 있어요.",
                         ],
@@ -309,10 +306,8 @@
               }),
               (0, i.jsx)(v, {
                 "data-aos": "fade-up",
-                desktopImage:
-                  "./static/images/pc_04.png",
-                mobileImage:
-                  "./static/images/mo_04.png",
+                desktopImage: "./static/images/pc_04.png",
+                mobileImage: "./static/images/mo_04.png",
                 children: (0, i.jsx)(_, {
                   children: (0, i.jsxs)("div", {
                     className: "content-container",
@@ -329,7 +324,7 @@
                       (0, i.jsxs)("h4", {
                         className: "description",
                         children: [
-                          "평균 10년차 이상 인자/직무 담당자이니까,",
+                          "평균 10년차 이상 인사/직무 담당자이니까,",
                           (0, i.jsx)("br", {}),
                           "정확하게 알려줄 수 있어요.",
                         ],
@@ -340,10 +335,8 @@
               }),
               (0, i.jsx)(j, {
                 "data-aos": n ? "" : "fade-up",
-                desktopImage:
-                  "./static/images/pc_05.png",
-                mobileImage:
-                  "./static/images/mo_05.png",
+                desktopImage: "./static/images/pc_05.png",
+                mobileImage: "./static/images/mo_05.png",
                 style: {
                   "background-color": "#E9E5FF",
                 },
@@ -355,17 +348,19 @@
                       (0, i.jsxs)("h4", {
                         className: "title",
                         children: [
-                          "나와 맞는 채용공고,",
+                          "나와 매칭된 회사는",
                           (0, i.jsx)("br", {}),
-                          "놓치지 않도록",
+                          "서류 없이 면접부터",
                         ],
                       }),
                       (0, i.jsxs)("h4", {
                         className: "description",
                         children: [
-                          "매번 채용사이트에 들어가 확인했나요?",
+                          "남들과 다른 출발점",
                           (0, i.jsx)("br", {}),
-                          "PUSH로 편하게 알려드려요.",
+                          "fast track을 만나세요.",
+                          (0, i.jsx)("br", {}),
+                          "(23년 12월 출시 예정)",
                         ],
                       }),
                     ],
@@ -373,8 +368,7 @@
                 }),
               }),
               (0, i.jsx)(I, {
-                desktopImage:
-                  "./static/images/pc_06.png",
+                desktopImage: "./static/images/pc_06.png",
                 children: (0, i.jsx)(_, {
                   children: (0, i.jsxs)("div", {
                     className: "content-container",
@@ -405,8 +399,7 @@
                 }),
               }),
               (0, i.jsx)(N, {
-                desktopImage:
-                  "./static/images/pc_07.png",
+                desktopImage: "./static/images/pc_07.png",
                 children: (0, i.jsx)(_, {
                   children: (0, i.jsxs)("div", {
                     className: "content-container",
@@ -449,68 +442,68 @@
                         },
                         children: "간편 가입하기",
                       }),
-                    //   (0, i.jsx)("a", {
-                    //     href: "https://play.google.com/store/apps/details?id=viva.republica.toss",
-                    //     target: "_blank",
-                    //     rel: "noreferrer",
-                    //     children: (0, i.jsx)("img", {
-                    //       className: "app-download-button",
-                    //       alt: "aos toss download",
-                    //       src: "https://static.tossinvestcdn.com/assets/image/web/download_google.png",
-                    //     }),
-                    //   }),
-                    //   (0, i.jsx)("a", {
-                    //     href: "https://itunes.apple.com/kr/app/%ED%86%A0%EC%8A%A4/id839333328?mt=8",
-                    //     target: "_blank",
-                    //     rel: "noreferrer",
-                    //     children: (0, i.jsx)("img", {
-                    //       className: "app-download-button",
-                    //       alt: "ios toss download",
-                    //       src: "https://static.tossinvestcdn.com/assets/image/web/download_apple.png",
-                    //     }),
-                    //   }),
+                      //   (0, i.jsx)("a", {
+                      //     href: "https://play.google.com/store/apps/details?id=viva.republica.toss",
+                      //     target: "_blank",
+                      //     rel: "noreferrer",
+                      //     children: (0, i.jsx)("img", {
+                      //       className: "app-download-button",
+                      //       alt: "aos toss download",
+                      //       src: "https://static.tossinvestcdn.com/assets/image/web/download_google.png",
+                      //     }),
+                      //   }),
+                      //   (0, i.jsx)("a", {
+                      //     href: "https://itunes.apple.com/kr/app/%ED%86%A0%EC%8A%A4/id839333328?mt=8",
+                      //     target: "_blank",
+                      //     rel: "noreferrer",
+                      //     children: (0, i.jsx)("img", {
+                      //       className: "app-download-button",
+                      //       alt: "ios toss download",
+                      //       src: "https://static.tossinvestcdn.com/assets/image/web/download_apple.png",
+                      //     }),
+                      //   }),
                     ],
                   }),
                 }),
               }),
-            //   (0, i.jsx)(z, {
-            //     desktopImage: "/static/images/career_202306@2x.jpg",
-            //     mobileImage: "/static/images/career_202306@2x.jpg",
-            //     children: (0, i.jsx)(_, {
-            //       children: (0, i.jsxs)("div", {
-            //         className: "content-container",
-            //         children: [
-            //           (0, i.jsxs)("h4", {
-            //             className: "title",
-            //             style: { color: "rgb(255, 255, 255)" },
-            //             children: [
-            //               "지원전에의 혁신",
-            //               (0, i.jsx)("br", {}),
-            //               "이제부터 시작입니다.",
-            //             ],
-            //           }),
-            //           (0, i.jsxs)("h4", {
-            //             className: "description",
-            //             style: { color: "rgb(139, 149, 161)" },
-            //             children: [
-            //               "지원전에이 만들 투자 산업의 새로운 혁신,",
-            //               (0, i.jsx)("br", {}),
-            //               "그 시작을 함께할 당신을 기다리고 있습니다.",
-            //             ],
-            //           }),
-            //           (0, i.jsx)("div", { className: "margin-top-button" }),
-            //           (0, i.jsx)(a.zx, {
-            //             type: "primary",
-            //             as: "a",
-            //             href: "https://toss.im/career/jobs/?category=%EC%A0%84%EC%B2%B4&company=securities",
-            //             className: "career-button",
-            //             style: { textDecoration: "none" },
-            //             children: "채용 공고 보기",
-            //           }),
-            //         ],
-            //       }),
-            //     }),
-            //   }),
+              //   (0, i.jsx)(z, {
+              //     desktopImage: "/static/images/career_202306@2x.jpg",
+              //     mobileImage: "/static/images/career_202306@2x.jpg",
+              //     children: (0, i.jsx)(_, {
+              //       children: (0, i.jsxs)("div", {
+              //         className: "content-container",
+              //         children: [
+              //           (0, i.jsxs)("h4", {
+              //             className: "title",
+              //             style: { color: "rgb(255, 255, 255)" },
+              //             children: [
+              //               "지원전에의 혁신",
+              //               (0, i.jsx)("br", {}),
+              //               "이제부터 시작입니다.",
+              //             ],
+              //           }),
+              //           (0, i.jsxs)("h4", {
+              //             className: "description",
+              //             style: { color: "rgb(139, 149, 161)" },
+              //             children: [
+              //               "지원전에이 만들 투자 산업의 새로운 혁신,",
+              //               (0, i.jsx)("br", {}),
+              //               "그 시작을 함께할 당신을 기다리고 있습니다.",
+              //             ],
+              //           }),
+              //           (0, i.jsx)("div", { className: "margin-top-button" }),
+              //           (0, i.jsx)(a.zx, {
+              //             type: "primary",
+              //             as: "a",
+              //             href: "https://toss.im/career/jobs/?category=%EC%A0%84%EC%B2%B4&company=securities",
+              //             className: "career-button",
+              //             style: { textDecoration: "none" },
+              //             children: "채용 공고 보기",
+              //           }),
+              //         ],
+              //       }),
+              //     }),
+              //   }),
             ],
           });
         },
