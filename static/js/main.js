@@ -7,9 +7,7 @@ document.write(
 
 window.addEventListener("load", function () {
     const host = window.location.host;
-    // alert(host == "in10s.co" || host == "www.in10s.co");
   if (host == "in10s.co" || host == "www.in10s.co") {
-    // alert(window.location.host);
     const toggleBtn = document.querySelector(".buttonIcon");
     const header = document.querySelector(".header");
 
@@ -20,10 +18,24 @@ window.addEventListener("load", function () {
     });
   }
 });
+function goPage(link){
+  const url_pathname = window.location.pathname + "";
+
+  gtag('event', 'go_page', {
+    'event_ category' : url_pathname,
+    'event_label' : link.replace('https://www.in10s.co','')
+  });
+
+  location.href = link;
+}
 
 function openTally(tag, mode, link) {
   const url_pathname = window.location.pathname + "";
   const device = new MobileDetect(navigator.userAgent);
+  gtag('event', 'regist_openTally', {
+    'event_ category' : url_pathname,
+    'event_label' : tag
+    });
 
   Tally.openPopup("3NlXpN", {
     layout: "modal",
@@ -53,7 +65,7 @@ function openTally(tag, mode, link) {
       // The popup was opened, mark the form as seen
       const tally_popup = document.querySelector(".tally-popup iframe");
       if (link && mode == "page") {
-        tally_popup.src = "https://www.in10s.co/service/acceptancerate/" + link;
+        tally_popup.src = "javascript:goPage(https://www.in10s.co/service/acceptancerate/" + link + "')";
         setTimeout(() => {
           var popup_display = setInterval(() => {
             if (tally_popup.readyState == "complete") {

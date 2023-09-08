@@ -392,8 +392,8 @@
       }
       let k = c.ZP.div.withConfig({ componentId: "sc-656ff4de-0" })(w()),
         y = [
-          { href: "https://www.in10s.co/jiwon/service", label: "이용 안내", isExternal: !0 },
-          { href: "https://www.in10s.co/jiwon/faq", label: "자주 묻는 질문", isExternal: !0 },
+          { href: "javascript:goPage('https://www.in10s.co/jiwon/service')", label: "이용 안내", isExternal: !0 },
+          { href: "javascript:goPage('https://www.in10s.co/jiwon/faq')", label: "자주 묻는 질문", isExternal: !0 },
           { href: "javascript:openTally('nav');", label: "시작하기" },
         ];
       var z = function (n) {
