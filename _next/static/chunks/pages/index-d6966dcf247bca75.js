@@ -236,7 +236,7 @@
                                   height: "53px",
                                   width: "154px",
                                 },
-                                children: "지원전 피드백 받기",
+                                children: "지원 전 피드백 받기",
                               }),
                             ],
                           }),
