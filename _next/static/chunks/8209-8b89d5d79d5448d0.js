@@ -429,7 +429,7 @@
                     : (0, i.jsx)("div", {
                         className: "headerLogo",
                         children: (0, i.jsx)(r(), {
-                          href: "/",
+                          href: "javascript:goPage('/')",
                           passHref: !0,
                           legacyBehavior: !0,
                           children: (0, i.jsx)("a", {
