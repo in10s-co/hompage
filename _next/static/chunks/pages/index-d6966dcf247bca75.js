@@ -440,7 +440,7 @@
                           height: "53px",
                           width: "154px",
                         },
-                        children: "간편 가입하기",
+                        children: "시작하기",
                       }),
                       //   (0, i.jsx)("a", {
                       //     href: "https://play.google.com/store/apps/details?id=viva.republica.toss",
