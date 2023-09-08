@@ -29,6 +29,15 @@ function goPage(link){
   location.href = link;
 }
 
+function clickBtn(tag){
+  const url_pathname = window.location.pathname + "";
+
+  gtag('event', 'btn_click', {
+    'event_ category' : url_pathname,
+    'event_label' : tag
+  });
+}
+
 function openTally(tag, mode, link) {
   const url_pathname = window.location.pathname + "";
   const device = new MobileDetect(navigator.userAgent);
