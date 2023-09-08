@@ -218,6 +218,7 @@
             tooltip.style.animation = "fadeInRight 1.5s";
             setTimeout(() => {
               tooltip.style.opacity = 1;
+            tooltip.style.display = 'flex';
             }, 1500);
           }
         });
@@ -228,6 +229,7 @@
           tooltip.style.animation = "fadeOut 1.5s";
           setTimeout(() => {
             tooltip.style.opacity = 0;
+            tooltip.style.display = 'none';
             closed = false;
           }, 1500);
         });
