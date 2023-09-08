@@ -206,7 +206,7 @@
                         ? (0, i.jsx)(a.zx, {
                             type: "primary",
                             as: "a",
-                            href: "javascript:openTally('btn1-mobile');",
+                            href: "https://www.in10s.co/jiwon/service",
                             style: {
                               textDecoration: "none",
                               marginTop: "1.3vh",
@@ -229,7 +229,7 @@
                               (0, i.jsx)(a.zx, {
                                 type: "primary",
                                 as: "a",
-                                href: "javascript:openTally('btn1-pc');",
+                                href: "https://www.in10s.co/jiwon/service",
                                 style: {
                                   textDecoration: "none",
                                   marginTop: "1.3vh",
@@ -433,7 +433,7 @@
                       (0, i.jsx)(a.zx, {
                         type: "primary",
                         as: "a",
-                        href: "javascript:openTally('btn2');",
+                        href: "https://www.in10s.co/jiwon/service",
                         style: {
                           textDecoration: "none",
                           marginTop: "1.3vh",
