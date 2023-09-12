@@ -13,6 +13,15 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="shortcut icon" href="/static.toss.im/tds/favicon/favicon.ico" />
+    <title>지원전에 | 경력직 이직준비생의 필수 서비스</title>
+    <meta name="description" content="경력직 이직 준비한다면 지원 전 현직자 피드백을 통해 나에게 맞는 대기업 중소기업 스타트업 회사로의 이직 가이드를 찾으세요." />
+<meta property="og:title" content="지원전에 | 경력직 이직준비생의 필수 서비스" />
+    <meta property="og:description" content="경력직 이직 준비한다면 지원 전 현직자 피드백을 통해 나에게 맞는 대기업 중소기업 스타트업 회사로의 이직 가이드를 찾으세요." />
+    <meta name="description" content="경력직 이직 준비한다면 지원 전 현직자 피드백을 통해 나에게 맞는 대기업 중소기업 스타트업 회사로의 이직 가이드를 찾으세요." />
+<meta
+      name="keywords"
+      content="지원전에, 이직, 환승이직, 물경력, 퇴준생, 퇴사준비생"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -71,8 +80,6 @@
       name="msapplication-TileImage"
       content="/static.toss.im/tds/favicon/mstile-144x144.png"
     />
-    <title>지원전에</title>
-    <meta name="description" content="이직을 심플하게" />
     <meta name="next-head-count" content="18" />
     <link rel="canonical" href="index.html" />
     <meta
@@ -88,19 +95,12 @@
       content="mtuu1ftc1fxhj2hxrhd8solfagpxma"
     />
     <meta name="toss:color-scheme" content="light dark" />
-    <meta property="og:title" content="지원전에" />
-    <meta property="og:description" content="이직을 심플하게, 지원전에" />
-    <meta name="description" content="이직을 심플하게, 지원전에" />
     <meta property="og:url" content="https://jiwon.in10s.co" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="static/images/og-image-210217.jpg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="Toss Securities" />
     <meta name="author" content="Toss Securities" />
-    <meta
-      name="keywords"
-      content="지원전에, 이직, 환승이직, 물경력, 퇴준생, 퇴사준비생"
-    />
     <link rel="preconnect" href="/static.toss.im/index.html" />
     <link rel="stylesheet" href="/static.toss.im/tds-pc/3.246.0/main.css" />
     <link
@@ -203,23 +203,33 @@
     <script src = "/static/js/main.js"></script>
 		<link rel="stylesheet" href="/static/css/main.css"/>
     <script>
+      var setCookie = function(name, value, exp) {
+          var date = new Date();
+          date.setTime(date.getTime() + exp*60*60*1000);
+          document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+      };
+      var getCookie = function(name) {
+          var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+          return value? value[2] : null;
+      };
       window.addEventListener('load', function () {
         const tooltip = document.querySelector(
           ".PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs-0"
         );
-        var closed = true;
+        var showTolltip = getCookie("tooltipHide") != null && getCookie("tooltipHide") == "true" ? false : true;
         window.addEventListener("scroll", function () {
           let scroll_height = window.pageYOffset;
           if (
             tooltip.style.opacity != 1 &&
             scroll_height > document.body.offsetHeight * 0.3 &&
-            closed
+            showTolltip
           ) {
             tooltip.style.animation = "fadeInRight 1.5s";
             setTimeout(() => {
               tooltip.style.opacity = 1;
             tooltip.style.display = 'flex';
             }, 1500);
+            setCookie("tooltipHide","true",1);
           }
         });
         const tooltip_close_btn = document.querySelector(
@@ -231,6 +241,7 @@
             tooltip.style.opacity = 0;
             tooltip.style.display = 'none';
             closed = false;
+            setCookie("tooltipHide","true",24);
           }, 1500);
         });
       });
@@ -464,6 +475,7 @@
       /* 채널톡 */
       .bqvTLz {
         opacity: 0;
+        display: none;
         z-index: 2;
         position: fixed;
         bottom: 30px;

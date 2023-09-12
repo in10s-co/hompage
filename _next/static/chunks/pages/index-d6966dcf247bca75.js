@@ -244,6 +244,7 @@
                   }),
                 }),
               }),
+
               (0, i.jsx)(w, {
                 desktopImage: "./static/images/pc_02.png",
                 mobileImage: "./static/images/mo_02.png",
@@ -254,7 +255,7 @@
                     children: [
                       (0, i.jsxs)("h4", {
                         className: "title",
-                        children: [
+                        children: [ 
                           "막막했던 이직 과정",
                           (0, i.jsx)("br", {}),
                           "현직자에게 확인",
@@ -277,6 +278,9 @@
               (0, i.jsx)(k, {
                 "data-aos": n ? "" : "fade-up",
                 desktopImage: "./static/images/pc_03.png",
+                // style: {
+                //   "background-color": "rgb(255, 255, 255)",
+                // },
                 children: (0, i.jsx)(_, {
                   children: (0, i.jsxs)("div", {
                     className: "content-container",
@@ -308,6 +312,9 @@
                 "data-aos": "fade-up",
                 desktopImage: "./static/images/pc_04.png",
                 mobileImage: "./static/images/mo_04.png",
+                // style: {
+                //   "background-color": "rgb(246, 247, 250)",
+                // },
                 children: (0, i.jsx)(_, {
                   children: (0, i.jsxs)("div", {
                     className: "content-container",
@@ -358,7 +365,7 @@
                         children: [
                           "남들과 다른 출발점",
                           (0, i.jsx)("br", {}),
-                          "fast track을 만나세요.",
+                          "Fast Track을 만나세요.",
                           (0, i.jsx)("br", {}),
                           "(23년 12월 출시 예정)",
                         ],

@@ -20,6 +20,9 @@ window.addEventListener("load", function () {
 });
 function goPage(link){
   const url_pathname = window.location.pathname + "";
+  if(link.substring(0, 1) == "/"){
+    link = "https://www.in10s.co" + link;
+  }
 
   gtag('event', 'go_page', {
     'event_ category' : url_pathname,
