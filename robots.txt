@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jison.in10s.co/sitemap.xml
