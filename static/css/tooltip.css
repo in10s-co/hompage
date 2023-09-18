@@ -25,10 +25,6 @@
   }
 }
 
-[role="button"]:not(.tooltipContents):hover {
-  background: rgba(55, 53, 47, 0.08);
-}
-
 .a11y-hidden {
   position: absolute;
   width: 1px;
