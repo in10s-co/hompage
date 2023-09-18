@@ -1,12 +1,11 @@
 document.write(
-  '<script async src="https://tally.so/widgets/embed.js"></script>'
-);
-document.write(
-  '<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>'
+  '<script async src="https://tally.so/widgets/embed.js"></script>' +
+  '<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>' +
+  '<script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>'
 );
 
 window.addEventListener("load", function () {
-    const host = window.location.host;
+  const host = window.location.host;
   if (host == "in10s.co" || host == "www.in10s.co") {
     const toggleBtn = document.querySelector(".buttonIcon");
     const header = document.querySelector(".header");
@@ -18,36 +17,36 @@ window.addEventListener("load", function () {
     });
   }
 });
-function goPage(link){
+function goPage(link) {
   const url_pathname = window.location.pathname + "";
-  if(link.substring(0, 1) == "/"){
+  if (link.substring(0, 1) == "/") {
     link = "https://www.in10s.co" + link;
   }
 
-  gtag('event', 'go_page', {
-    'event_ category' : url_pathname,
-    'event_label' : link.replace('https://www.in10s.co','')
+  gtag("event", "go_page", {
+    "event_ category": url_pathname,
+    event_label: link.replace("https://www.in10s.co", ""),
   });
 
   location.href = link;
 }
 
-function clickBtn(tag){
+function clickBtn(tag) {
   const url_pathname = window.location.pathname + "";
 
-  gtag('event', 'btn_click', {
-    'event_ category' : url_pathname,
-    'event_label' : tag
+  gtag("event", "btn_click", {
+    "event_ category": url_pathname,
+    event_label: tag,
   });
 }
 
 function openTally(tag, mode, link) {
   const url_pathname = window.location.pathname + "";
   const device = new MobileDetect(navigator.userAgent);
-  gtag('event', 'regist_openTally', {
-    'event_ category' : url_pathname,
-    'event_label' : tag
-    });
+  gtag("event", "regist_openTally", {
+    "event_ category": url_pathname,
+    event_label: tag,
+  });
 
   Tally.openPopup("3NlXpN", {
     layout: "modal",
@@ -71,13 +70,16 @@ function openTally(tag, mode, link) {
         device.os() +
         ",pcOs: " +
         navigator.platform +
-        "}"
+        "}",
     },
     onOpen: () => {
       // The popup was opened, mark the form as seen
       const tally_popup = document.querySelector(".tally-popup iframe");
       if (link && mode == "page") {
-        tally_popup.src = "javascript:goPage(https://www.in10s.co/service/acceptancerate/" + link + "')";
+        tally_popup.src =
+          "javascript:goPage(https://www.in10s.co/service/acceptancerate/" +
+          link +
+          "')";
         setTimeout(() => {
           var popup_display = setInterval(() => {
             if (tally_popup.readyState == "complete") {
@@ -103,3 +105,68 @@ function openTally(tag, mode, link) {
     },
   });
 }
+
+// Microsoft Clarity
+(function (c, l, a, r, i, t, y) {
+  c[a] =
+    c[a] ||
+    function () {
+      (c[a].q = c[a].q || []).push(arguments);
+    };
+  t = l.createElement(r);
+  t.async = 1;
+  t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+  y = l.getElementsByTagName(r)[0];
+  y.parentNode.insertBefore(t, y);
+})(window, document, "clarity", "script", "iusk7x1q7r");
+
+// landbot 시작
+var setLandbot = function () {
+  return new Landbot.Popup({
+    configUrl:
+      "https://storage.googleapis.com/landbot.online/v3/H-1718087-YI3HSK1S39RCZ1L1/index.json",
+  });
+};
+
+var openLandbot = function (bot) {
+  var popup_modal = document.querySelector(".LandbotPopup");
+  bot.open();
+  popup_modal.style.display = "flex";
+  popup_modal.style.animation = "fadeIn 1.5s";
+  popup_modal.style.opacity = 1;
+
+  var popup_modal_close_btn = modalCloseBtn();
+  popup_modal_close_btn.addEventListener("click", function () {
+    bot.close();
+    popup_modal.style.display = "none";
+    popup_modal.style.animation = "fadeOut 1.5s";
+    popup_modal.style.opacity = 0;
+  });
+};
+
+var modalCloseBtn = function () {
+  var popup_modal_close_btn = document.querySelector(
+    ".Header__NavigationButton"
+  );
+  if (popup_modal_close_btn != null) {
+    return popup_modal_close_btn;
+  } else {
+    return modalCloseBtn();
+  }
+};
+
+
+window.addEventListener("load", function () {
+  const try_tooltip = document.querySelector(
+    ".PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs2-0"
+  );
+  try_tooltip.addEventListener("click", function () {
+    openLandbot(setLandbot());
+  });
+
+  setTimeout(() => {
+    try_tooltip.style.opacity = 1;
+    try_tooltip.style.display = "flex";
+  }, 1500);
+});
+// landbot 종료

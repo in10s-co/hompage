@@ -221,10 +221,7 @@
     <!-- 수정한 부분 customize -->
     <script src="/static/js/main.js"></script>
     <link rel="stylesheet" href="/static/css/main.css" />
-    <script
-      SameSite="None; Secure"
-      src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"
-    ></script>
+    <link rel="stylesheet" href="/static/css/tooltip.css" />
     <script>
       var setCookie = function (name, value, exp) {
         var date = new Date();
@@ -236,60 +233,12 @@
         var value = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
         return value ? value[2] : null;
       };
-      var setLandbot = function () {
-        return new Landbot.Popup({
-          configUrl:
-            "https://storage.googleapis.com/landbot.online/v3/H-1718087-YI3HSK1S39RCZ1L1/index.json",
-        });
-      };
-
-      var myLandbot = setLandbot();
-
-      var openLandbot = function (bot) {
-        var popup_modal = document.querySelector(".LandbotPopup");
-        bot.open();
-        popup_modal.style.display = "flex";
-        popup_modal.style.animation = "fadeIn 1.5s";
-        popup_modal.style.opacity = 1;
-
-        var popup_modal_close_btn = modalCloseBtn();
-        popup_modal_close_btn.addEventListener("click", function () {
-          bot.close();
-          popup_modal.style.display = "none";
-          popup_modal.style.animation = "fadeOut 1.5s";
-          popup_modal.style.opacity = 0;
-        });
-      };
-
-      var modalCloseBtn = function () {
-        var popup_modal_close_btn = document.querySelector(
-          ".Header__NavigationButton"
-        );
-        if (popup_modal_close_btn != null) {
-          return popup_modal_close_btn;
-        } else {
-          return modalCloseBtn();
-        }
-      };
 
       window.addEventListener("load", function () {
         const tooltip = document.querySelector(
           ".PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs-0"
         );
-        const try_tooltip = document.querySelector(
-          ".PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs2-0"
-        );
-        try_tooltip.addEventListener("click", function () {
-          openLandbot(myLandbot);
-        });
 
-        setTimeout(() => {
-          // try_tooltip.addEventListener("click", function(){
-          //   document.querySelectorAll(".LivechatLauncher")[0].click();
-          // });
-          try_tooltip.style.opacity = 1;
-          try_tooltip.style.display = "flex";
-        }, 1500);
         var showTolltip =
           getCookie("tooltipHide") != null && getCookie("tooltipHide") == "true"
             ? false
@@ -331,15 +280,6 @@
         //   }, 1500);
         // });
       });
-    </script>
-
-    <!-- Microsoft Clarity -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "iusk7x1q7r");
     </script>
 
     <style data-styled="" data-styled-version="6.0.0-rc.2-4007">
@@ -549,32 +489,6 @@
       }
     </script>
     <style>
-      @keyframes fadeInRight {
-        0% {
-          opacity: 0;
-          transform: translate3d(80%, 0, 0);
-        }
-        to {
-          opacity: 1;
-          transform: translateZ(0);
-        }
-      }
-      @keyframes fadeOut {
-        0% {
-          opacity: 1;
-        }
-        to {
-          opacity: 0;
-        }
-      }
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
 
       /* 채널톡 */
       .bqvTLz {
@@ -587,16 +501,6 @@
         min-width: 230px;
         max-width: 320px;
       }
-      .a11y-hidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin-top: -1px;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        clip: rect(0px, 0px, 0px, 0px);
-        clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
-      }
       .cmKwMG {
         position: relative;
         display: flex;
@@ -604,23 +508,6 @@
         align-items: flex-end;
         width: 100%;
         height: max-content;
-      }
-      .hLIkPg {
-        position: relative;
-        display: flex;
-        width: 100%;
-        padding-bottom: 16px;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        box-shadow: rgba(255, 255, 255, 0.12) 0px 0px 2px 0px inset,
-          rgba(0, 0, 0, 0.05) 0px 0px 2px 1px, rgba(0, 0, 0, 0.15) 0px 4px 12px;
-        background-color: rgb(255, 255, 255);
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        border-bottom-left-radius: 20px;
       }
       .iwvFdZ {
         position: relative;
@@ -752,7 +639,7 @@
       >
         <div
           role="button"
-          class="MediumSizeContentstyled__Wrapper-ch-front__sc-1flgzbv-2 hLIkPg"
+          class="MediumSizeContentstyled__Wrapper-ch-front__sc-1flgzbv-2 tooltipContents"
           style="flex-direction: column"
         >
           <button type="button" class="a11y-hidden">상담 시작하기</button>
@@ -888,19 +775,6 @@
       </div>
     </article>
     <style>
-      .kvtMgr {
-        display: none;
-        opacity: 0;
-        position: fixed;
-        right: 30px;
-        bottom: 30px;
-        min-width: 230px;
-        max-width: 320px;
-        animation: fadeInRight 1.5s;
-      }
-      .gcPqyR {
-        position: relative;
-      }
       /* .kdbiBm {
         position: relative;
         box-sizing: border-box;
@@ -915,89 +789,22 @@
         background: rgb(255, 255, 255);
         border-radius: 20px;
       } */
-      .dKDKsh {
-        position: relative;
-        width: 42px;
-        height: 42px;
-      }
-      .gBOgWx {
-        top: -15%;
-        left: -20%;
-        position: absolute;
-        width: 130%;
-        height: 130%;
-        overflow: hidden;
-        background-color: rgb(255, 255, 255);
-        background-image: url(https://jiwon.in10s.co/static/images/applogo.png);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        border: 2px solid rgb(255, 255, 255);
-        border-radius: 12.6px;
-      }
-      .lfXoKn {
-        display: flex;
-        flex: 1 1 0%;
-        flex-direction: column;
-        gap: 2px;
-        max-width: 100%;
-        padding: 1px 2px;
-        overflow: hidden;
-        margin-left: 4px;
-      }
-      .kqRZza {
-        overflow: hidden;
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: -0.1px;
-        text-align: left;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-      .jOeHgT {
-        display: flex;
-        column-gap: 4px;
-        -webkit-box-align: center;
-        align-items: center;
-      }
-      .iCEngM {
+      /* .iCEngM {
         flex: 0 0 auto;
         margin: 0px;
         color: rgb(49, 165, 82);
         transition: color 150ms cubic-bezier(0.3, 0, 0, 1) 0ms;
-      }
-      .bRfqdt {
-        font-size: 13px;
-        line-height: 18px;
-        display: block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin: 0px;
-        font-style: normal;
-        font-weight: normal;
-        color: rgba(0, 0, 0, 0.4);
-        transition: color 150ms cubic-bezier(0.3, 0, 0, 1) 0ms;
-      }
-      .hLYLWV {
-        display: block;
-      }
-      .LandbotPopup {
-        display: none;
-        opacity: 0;
-      }
+      } */
     </style>
     <article
       role="dialog"
-      class="PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs2-0 kvtMgr"
+      class="PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs2-0 tryTooltip"
     >
       <h2 class="a11y-hidden">Channel Talk pop-up</h2>
-      <div class="PCLabelButton__Wrapper-ch-front__sc-1viw4do-1 gcPqyR">
+      <div class="PCLabelButton__Wrapper-ch-front__sc-1viw4do-1 tryTooltipWrapper">
         <div
           role="button"
-          class="MediumSizeContentstyled__Wrapper-ch-front__sc-1flgzbv-2 hLIkPg"
+          class="MediumSizeContentstyled__Wrapper-ch-front__sc-1flgzbv-2 tooltipContents"
           style="
             -webkit-box-align: center;
             align-items: center;
@@ -1005,17 +812,17 @@
             /* padding: 14px 62px 14px 14px; */
           "
         >
-          <div class="OperatorAvatars__Wrapper-ch-front__sc-1sex4br-0 dKDKsh">
+          <div class="OperatorAvatars__Wrapper-ch-front__sc-1sex4br-0 tryTooltipIconWrapper">
             <div
               src="/static/images/applogo.png"
-              class="OperatorAvatars__FirstAvatar-ch-front__sc-1sex4br-1 gBOgWx"
+              class="OperatorAvatars__FirstAvatar-ch-front__sc-1sex4br-1 tryTooltipIcon"
             ></div>
           </div>
-          <div class="PCLabelButton__TextWrapper-ch-front__sc-1viw4do-2 lfXoKn">
-            <div class="PCLabelButton__Title-ch-front__sc-1viw4do-3 kqRZza">
+          <div class="PCLabelButton__TextWrapper-ch-front__sc-1viw4do-2 tryTooltipTextWrapper">
+            <div class="PCLabelButton__Title-ch-front__sc-1viw4do-3 tryTooltipTitle">
               "지원전에" 체험하기
             </div>
-            <div class="PCLabelButton__Status-ch-front__sc-1viw4do-4 jOeHgT">
+            <div class="PCLabelButton__Status-ch-front__sc-1viw4do-4 tryTooltipInfoWrapper">
               <!-- <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -1038,7 +845,7 @@
                   clip-rule="evenodd"
                 ></path></svg> -->
               <span
-                class="Textstyled__Text-sc-1u7b1ni-0 bRfqdt"
+                class="Textstyled__Text-sc-1u7b1ni-0 tryTooltipInfo"
                 color="txt-black-dark"
                 data-testid="bezier-react-text"
                 >지원이와 함께 현직자 피드백을 체험해보세요!</span
