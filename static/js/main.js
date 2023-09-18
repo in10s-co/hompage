@@ -1,7 +1,7 @@
 document.write(
   '<script async src="https://tally.so/widgets/embed.js"></script>' +
-  '<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>' +
-  '<script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>'
+    '<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>' +
+    '<script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>'
 );
 
 window.addEventListener("load", function () {
@@ -130,43 +130,41 @@ var setLandbot = function () {
 
 var openLandbot = function (bot) {
   var popup_modal = document.querySelector(".LandbotPopup");
+  if (popup_modal == null) {
+    popup_modal = document.querySelector(".LandbotPopup");
+  }
   bot.open();
   popup_modal.style.display = "flex";
   popup_modal.style.animation = "fadeIn 1.5s";
   popup_modal.style.opacity = 1;
 
-  var popup_modal_close_btn = modalCloseBtn();
-  popup_modal_close_btn.addEventListener("click", function () {
-    bot.close();
-    popup_modal.style.display = "none";
-    popup_modal.style.animation = "fadeOut 1.5s";
-    popup_modal.style.opacity = 0;
-  });
+  var timeout = setInterval(() => {
+    if (!popup_modal.classList.contains("is-open")) {
+      bot.close();
+      popup_modal.style.display = "none";
+      popup_modal.style.animation = "fadeOut 1.5s";
+      popup_modal.style.opacity = 0;
+      clearInterval(timeout);
+    }
+  }, 500);
 };
-
-var modalCloseBtn = function () {
-  var popup_modal_close_btn = document.querySelector(
-    ".Header__NavigationButton"
-  );
-  if (popup_modal_close_btn != null) {
-    return popup_modal_close_btn;
-  } else {
-    return modalCloseBtn();
-  }
-};
-
 
 window.addEventListener("load", function () {
-  const try_tooltip = document.querySelector(
-    ".PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs2-0"
+  const notion_cta = document.querySelector(
+    ".cta"
   );
-  try_tooltip.addEventListener("click", function () {
-    openLandbot(setLandbot());
-  });
-
-  setTimeout(() => {
-    try_tooltip.style.opacity = 1;
-    try_tooltip.style.display = "flex";
-  }, 1500);
+  if(notion_cta == null){
+    const try_tooltip = document.querySelector(
+      ".PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs2-0"
+    );
+    var landbot = setLandbot();
+    setTimeout(() => {
+      try_tooltip.style.opacity = 1;
+      try_tooltip.style.display = "flex";
+      try_tooltip.addEventListener("click", function () {
+        openLandbot(landbot);
+      });
+    }, 1500);
+  }
 });
 // landbot 종료

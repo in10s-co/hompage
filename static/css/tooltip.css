@@ -63,6 +63,7 @@
   min-width: 230px;
   max-width: 320px;
   animation: fadeInRight 1.5s;
+  z-index: 9999999;
 }
 .tryTooltipWrapper {
   position: relative;
