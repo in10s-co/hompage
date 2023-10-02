@@ -4,19 +4,29 @@ document.write(
     '<script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>'
 );
 
-window.addEventListener("load", function () {
-  const host = window.location.host;
-  if (host == "in10s.co" || host == "www.in10s.co") {
-    const toggleBtn = document.querySelector(".buttonIcon");
-    const header = document.querySelector(".header");
+// window.addEventListener("load", function () {
+//   const host = window.location.host;
+//   if (host == "in10s.co" || host == "www.in10s.co") {
+//     const toggleBtn = document.querySelector(".buttonIcon");
+//     const header = document.querySelector(".header");
 
-    toggleBtn.addEventListener("click", () => {
-      header.classList.toggle("headerOpen");
-      toggleBtn.classList.toggle("buttonIconNav");
-      toggleBtn.classList.toggle("buttonIconClose");
-    });
-  }
-});
+//     toggleBtn.addEventListener("click", () => {
+//       header.classList.toggle("headerOpen");
+//       toggleBtn.classList.toggle("buttonIconNav");
+//       toggleBtn.classList.toggle("buttonIconClose");
+//     });
+//   }
+// });
+
+function mobileMenuToogle() {
+  const toggleBtn = document.querySelector(".buttonIcon");
+  const header = document.querySelector(".header");
+
+  header.classList.toggle("headerOpen");
+  toggleBtn.classList.toggle("buttonIconNav");
+  toggleBtn.classList.toggle("buttonIconClose");
+}
+
 function goPage(link) {
   const url_pathname = window.location.pathname + "";
   if (link.substring(0, 1) == "/") {
