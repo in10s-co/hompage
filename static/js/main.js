@@ -18,15 +18,6 @@ window.addEventListener("load", function () {
   }
 });
 
-function mobileMenuToggle() {
-  const toggleBtn = document.querySelector(".menuToggleBtn");
-  const header = document.querySelector(".header");
-
-  header.classList.toggle("headerOpen");
-  toggleBtn.classList.toggle("buttonIconNav");
-  toggleBtn.classList.toggle("buttonIconClose");
-}
-
 function goPage(link) {
   const url_pathname = window.location.pathname + "";
   if (link.substring(0, 1) == "/") {
