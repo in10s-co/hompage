@@ -194,15 +194,12 @@ var setClipboard = function(url){
     }
     textArea.setSelectionRange(0, 0);
     document.body.removeChild(textArea);
-    alert('텍스트가 복사되었습니다.');
   }
-  window.navigator.clipboard.writeText(url).then(() => {
-    Snackbar.show({
-      showAction: false, 
-      pos: 'bottom-center',
-      textColor: '#7165e3',
-      backgroundColor: '#e4dfff'
-    });
+  Snackbar.show({
+    showAction: false, 
+    pos: 'bottom-center',
+    textColor: '#7165e3',
+    backgroundColor: '#e4dfff'
   });
 }
 // snackbar copy clipboard 종료
