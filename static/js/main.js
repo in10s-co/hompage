@@ -175,7 +175,7 @@ window.addEventListener("load", function () {
 // snackbar copy clipboard 시작
 var setClipboard = function(url){
   if (navigator.clipboard !== undefined) {
-    navigator.clipboard
+    navigator.clㅎipboard
       .writeText(url)
       .then(() => {
         //
@@ -196,6 +196,7 @@ var setClipboard = function(url){
     document.body.removeChild(textArea);
   }
   Snackbar.show({
+    text: '클립보드에 복사되었습니다.',
     showAction: false, 
     pos: 'bottom-center',
     textColor: '#7165e3',
