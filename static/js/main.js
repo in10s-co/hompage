@@ -175,7 +175,7 @@ window.addEventListener("load", function () {
 // snackbar copy clipboard 시작
 var setClipboard = function(url){
   if (navigator.clipboard !== undefined) {
-    navigator.clㅎipboard
+    navigator.clipboard
       .writeText(url)
       .then(() => {
         //
