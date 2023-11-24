@@ -171,3 +171,38 @@ window.addEventListener("load", function () {
   }
 });
 // landbot 종료
+
+// snackbar copy clipboard 시작
+var setClipboard = function(url){
+  if (navigator.clipboard !== undefined) {
+    navigator.clipboard
+      .writeText(url)
+      .then(() => {
+        //
+      });
+  } else {
+    // execCommand 사용
+    const textArea = document.createElement('textarea');
+    textArea.value = url;
+    document.body.appendChild(textArea);
+    textArea.select();
+    textArea.setSelectionRange(0, 99999);
+    try {
+      document.execCommand('copy');
+    } catch (err) {
+      console.error('복사 실패', err);
+    }
+    textArea.setSelectionRange(0, 0);
+    document.body.removeChild(textArea);
+    alert('텍스트가 복사되었습니다.');
+  }
+  window.navigator.clipboard.writeText(url).then(() => {
+    Snackbar.show({
+      showAction: false, 
+      pos: 'bottom-center',
+      textColor: '#7165e3',
+      backgroundColor: '#e4dfff'
+    });
+  });
+}
+// snackbar copy clipboard 종료
