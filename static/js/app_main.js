@@ -1,9 +1,6 @@
 document.write(
   '<script async src="https://tally.so/widgets/embed.js"></script>' +
-  '<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>' +
-  '<script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>' +
-  '<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>' +
-  '<script src="https://jiwon.in10s.co/static/js/snackbar.js"></script>'
+  '<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>'
 );
 
 window.addEventListener("load", function () {
@@ -122,52 +119,3 @@ function openTally(tag, mode, link) {
   y = l.getElementsByTagName(r)[0];
   y.parentNode.insertBefore(t, y);
 })(window, document, "clarity", "script", "iusk7x1q7r");
-
-// landbot 시작
-var setLandbot = function () {
-  return new Landbot.Popup({
-    configUrl:
-      "https://storage.googleapis.com/landbot.online/v3/H-1718087-YI3HSK1S39RCZ1L1/index.json",
-  });
-};
-
-var openLandbot = function (bot) {
-  var popup_modal = document.querySelector(".LandbotPopup");
-  if (popup_modal == null) {
-    popup_modal = document.querySelector(".LandbotPopup");
-  }
-  bot.open();
-  popup_modal.style.display = "flex";
-  popup_modal.style.animation = "fadeIn 1.5s";
-  popup_modal.style.opacity = 1;
-
-  var timeout = setInterval(() => {
-    if (!popup_modal.classList.contains("is-open")) {
-      bot.close();
-      popup_modal.style.display = "none";
-      popup_modal.style.animation = "fadeOut 1.5s";
-      popup_modal.style.opacity = 0;
-      clearInterval(timeout);
-    }
-  }, 500);
-};
-
-window.addEventListener("load", function () {
-  const notion_cta = document.querySelector(
-    ".cta"
-  );
-  if(notion_cta == null){
-    const try_tooltip = document.querySelector(
-      ".PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs2-0"
-    );
-    var landbot = setLandbot();
-    setTimeout(() => {
-      try_tooltip.style.opacity = 1;
-      try_tooltip.style.display = "flex";
-      try_tooltip.addEventListener("click", function () {
-        openLandbot(landbot);
-      });
-    }, 1500);
-  }
-});
-// landbot 종료
