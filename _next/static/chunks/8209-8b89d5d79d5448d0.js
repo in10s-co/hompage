@@ -394,7 +394,7 @@
         y = [
           { href: "javascript:goPage('https://www.in10s.co/jiwon/service')", label: "이용 안내", isExternal: !0 },
           { href: "javascript:goPage('https://www.in10s.co/jiwon/faq')", label: "자주 묻는 질문", isExternal: !0 },
-          { href: "javascript:openTally('nav');", label: "시작하기" },
+          { href: "javascript:goPage('https://jiwon-app.in10s.co');", label: "시작하기" },
         ];
       var z = function (n) {
         let { transparent: e = !1, isMainPage: t = !1 } = n,

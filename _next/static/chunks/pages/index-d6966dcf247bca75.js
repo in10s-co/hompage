@@ -206,13 +206,13 @@
                         ? (0, i.jsx)(a.zx, {
                             type: "primary",
                             as: "a",
-                            href: "javascript:goPage('https://www.in10s.co/jiwon/service')",
+                            href: "javascript:goPage('https://jiwon-app.in10s.co')",
                             style: {
                               textDecoration: "none",
                               marginTop: "1.3vh",
                               width: "auto",
                             },
-                            children: "지원 전 피드백 받기",
+                            children: "지원전에 검증받기",
                           })
                         : (0, i.jsxs)(i.Fragment, {
                             children: [
@@ -229,14 +229,14 @@
                               (0, i.jsx)(a.zx, {
                                 type: "primary",
                                 as: "a",
-                                href: "javascript:goPage('https://www.in10s.co/jiwon/service')",
+                                href: "javascript:goPage('https://jiwon-app.in10s.co')",
                                 style: {
                                   textDecoration: "none",
                                   marginTop: "1.3vh",
                                   height: "53px",
                                   width: "154px",
                                 },
-                                children: "지원 전 피드백 받기",
+                                children: "지원전에 검증받기",
                               }),
                             ],
                           }),
@@ -440,7 +440,7 @@
                       (0, i.jsx)(a.zx, {
                         type: "primary",
                         as: "a",
-                        href: "javascript:goPage('https://www.in10s.co/jiwon/service')",
+                        href: "javascript:goPage('https://jiwon-app.in10s.co')",
                         style: {
                           textDecoration: "none",
                           marginTop: "1.3vh",
