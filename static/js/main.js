@@ -26,10 +26,10 @@ function goPage(link) {
     link = "https://www.in10s.co" + link;
   }
 
-  gtag("event", "go_page", {
-    "event_ category": url_pathname,
-    event_label: link.replace("https://www.in10s.co", ""),
-  });
+  // gtag("event", "go_page", {
+  //   "event_ category": url_pathname,
+  //   event_label: link.replace("https://www.in10s.co", ""),
+  // });
 
   location.href = link;
 }
@@ -37,19 +37,19 @@ function goPage(link) {
 function clickBtn(tag) {
   const url_pathname = window.location.pathname + "";
 
-  gtag("event", "btn_click", {
-    "event_ category": url_pathname,
-    event_label: tag,
-  });
+  // gtag("event", "btn_click", {
+  //   "event_ category": url_pathname,
+  //   event_label: tag,
+  // });
 }
 
 function openTally(tag, mode, link) {
   const url_pathname = window.location.pathname + "";
   const device = new MobileDetect(navigator.userAgent);
-  gtag("event", "regist_openTally", {
-    "event_ category": url_pathname,
-    event_label: tag,
-  });
+  // gtag("event", "regist_openTally", {
+  //   "event_ category": url_pathname,
+  //   event_label: tag,
+  // });
 
   Tally.openPopup("3NlXpN", {
     layout: "modal",
