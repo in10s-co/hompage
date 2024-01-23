@@ -1,10 +1,10 @@
 document.write(
   '<script async src="https://tally.so/widgets/embed.js"></script>' +
   '<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>' +
-  '<script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>' +
   '<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>' +
   '<script src="https://jiwon.in10s.co/static/js/snackbar.js"></script>'
 );
+// '<script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>' +
 
 window.addEventListener("load", function () {
   const host = window.location.host;
