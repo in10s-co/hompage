@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jiwon.in10s.co/sitemap.xml
+Sitemap: https://jiwon-a.in10s.co/sitemap.xml
